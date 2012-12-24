@@ -1,3 +1,8 @@
+" enable pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
 " Description: A minimal, but feature rich, example .vimrc. If you are a
@@ -18,7 +23,9 @@ set nocompatible
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
-filetype indent plugin on
+if has("autocmd")
+  filetype indent plugin on
+endif
 
 " Enable syntax highlighting
 syntax on
