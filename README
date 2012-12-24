@@ -1,0 +1,7 @@
+Installation:
+
+git clone git://github.com/gaoyangsandy/dotvim.git ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+
+
+
