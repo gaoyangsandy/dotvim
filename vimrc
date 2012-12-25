@@ -63,9 +63,11 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
-" Highlight searches (use <C-L> to temporarily turn off highlighting; see the
-" mapping of <C-L> below)
+" Better search
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 " Modelines have historically been a source of security vulnerabilities. As
 " such, it may be a good idea to disable them and use the securemodelines
@@ -81,9 +83,6 @@ set hlsearch
 " which are considered to add usability. Which, if any, of these options to
 " use is very much a personal preference, but they are harmless.
 
-" Use case insensitive search, except when using capital letters
-set ignorecase
-set smartcase
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
@@ -160,10 +159,8 @@ set expandtab
   map <C-k> <C-w>k
   map <C-h> <C-w>h
   map <C-l> <C-w>l
-  map <C-m> <C-w>_
-  nmap + 2<C-w>>
-  nmap <Leader>+ 2<C-w><
-  nmap _ 2<C-w>-
+  nmap + <C-w>+
+  nmap _ <C-w>-
 
   " movin around
   nmap -- :tabfirst<CR>
