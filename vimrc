@@ -155,14 +155,24 @@ set expandtab
 "
 " Useful mappings
 
-" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
-" which is the default
-map Y y$
+" Split windows navigation
+  map <C-j> <C-w>j
+  map <C-k> <C-w>k
+  map <C-h> <C-w>h
+  map <C-l> <C-w>l
+  map <C-m> <C-w>_
+  nmap + 2<C-w>>
+  nmap <Leader>+ 2<C-w><
+  nmap _ 2<C-w>-
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
-nnoremap <C-L> :nohl<CR><C-L>
-
-
+  " movin around
+  nmap -- :tabfirst<CR>
+  nmap -0 :tablast<CR>
+  nmap -1 :tabnext 1<CR>
+  nmap -2 :tabnext 2<CR>
+  nmap -3 :tabnext 3<CR>
+  nmap -4 :tabnext 4<CR>
+  nmap -5 :tabnext 5<CR>
+  nmap -6 :tabnext 6<CR>
 "------------------------------------------------------------
 
